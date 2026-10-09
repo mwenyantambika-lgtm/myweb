@@ -110,3 +110,315 @@ button:hover {
 footer {
   text-align: center;
 }
+
+/* Hero intro area (id selector) */
+#hero {
+  background: #1e3a8a;
+  color: #ffffff;
+  padding: 2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+
+/* Programme line (class selector) */
+.programme {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Button style (class selector) */
+.btn {
+  display: inline-block;
+  background: #facc15;
+  color: #1f2933;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hover and keyboard focus states */
+.btn:hover {
+  background: #fde047;
+}
+
+.btn:focus {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* Project cards: same style for all three (class selector) */
+.project-card {
+  background: var(--card);
+  border: 1px solid #d1d5db;
+  border-left: 5px solid var(--primary);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+/* Cards lift slightly on hover */
+.project-card:hover {
+  border-color: var(--primary);
+}
+
+/* Padding and borders count inside the width, so nothing overflows */
+* {
+  box-sizing: border-box;
+}
+
+/* Visible keyboard focus for nav links */
+nav a:focus {
+  outline: 3px solid #facc15;
+  outline-offset: 3px;
+}
+
+/* Media query: adjusts the layout on narrow screens */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 0;
+    padding: 0.6rem 0;
+  }
+
+  #hero {
+    padding: 1.5rem 1rem;
+  }
+
+  #hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    display: block;
+    text-align: center;
+  }
+}
+
+.error {
+  display: block;
+  color: #b91c1c;
+  font-size: 0.9rem;
+}
+
+
+/* Dark mode button */
+#theme-toggle {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+  background: transparent;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#theme-toggle:hover {
+  background: #ffffff;
+  color: #1f2933;
+}
+
+#theme-toggle:focus {
+  outline: 3px solid #facc15;
+  outline-offset: 3px;
+}
+
+/* Dark theme: switches the colour variables when body has the "dark" class */
+body.dark {
+  --bg: #111827;
+  --text: #f3f4f6;
+  --card: #1f2937;
+  --primary: #60a5fa;
+}
+
+/* Dark mode button */
+#theme-toggle {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+  background: transparent;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#theme-toggle:hover {
+  background: #ffffff;
+  color: #1f2933;
+}
+
+#theme-toggle:focus {
+  outline: 3px solid #facc15;
+  outline-offset: 3px;
+}
+
+/* Dark mode overrides: direct colours so the old styles can't win */
+body.dark {
+  background: #111827;
+  color: #f3f4f6;
+}
+
+body.dark section,
+body.dark .project-card {
+  background: #1f2937;
+  color: #f3f4f6;
+  border-color: #374151;
+}
+
+body.dark h2,
+body.dark h3 {
+  color: #93c5fd;
+}
+
+body.dark table,
+body.dark th,
+body.dark td {
+  background: #1f2937;
+  color: #f3f4f6;
+  border-color: #6b7280;
+}
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+  background: #111827;
+  color: #f3f4f6;
+  border: 1px solid #6b7280;
+}
+
+body.dark {
+  background-color:#111827;
+  color: #f3f4f6;
+}
+
+body.dark{
+  background-color:#111827;
+  color:f3f4f6;
+}
+
+/*Dark mode for main page areas*/
+body.dark header,
+body.dark nav,
+body.dark main,
+body.dark section,
+body.dark footer {
+  background:#1f2937;
+  color:#f3f4f6;
+}
+
+/* ===== Dark theme ===== */
+body.dark {
+  background-color: #111827 !important;
+  color: #f3f4f6 !important;
+}
+
+body.dark header,
+body.dark nav,
+body.dark main,
+body.dark section,
+body.dark footer,
+body.dark article,
+body.dark div {
+  background-color: #1f2937 !important;
+  color: #f3f4f6 !important;
+}
+
+/* Menu button: hidden on computers */
+#menu-toggle {
+  display: none;
+  width: 100%;
+  padding: 0.75rem;
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#menu-toggle:focus {
+  outline: 3px solid #facc15;
+  outline-offset: 3px;
+}
+
+/* On phones: show the button and hide the links until the menu is open */
+@media (max-width: 600px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  nav a {
+    display: none;
+  }
+
+  nav.open a {
+    display: block;
+  }
+}
+
+/* Gallery: one photo at a time, centred */
+.slide {
+  margin: 0;
+  text-align: center;
+}
+
+.slide img {
+  max-width: 100%;
+  height: auto;
+  border: 3px solid var(--primary);
+  border-radius: 8px;
+}
+
+.slide figcaption {
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Previous / Next buttons and the counter */
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery-controls button {
+  padding: 0.6rem 1.2rem;
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.gallery-controls button:hover {
+  opacity: 0.85;
+}
+
+.gallery-controls button:focus {
+  outline: 3px solid #facc15;
+  outline-offset: 3px;
+}
+
+.gallery-controls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Colour palette used by the gallery, cards and dark mode */
+:root {
+  --bg: #f5f7fa;
+  --text: #1f2933;
+  --primary: #2563eb;
+  --card: #ffffff;
+}

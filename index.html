@@ -3,35 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MWENYA NTAMBIKA - Computer Science Student</title>
+  <title>MWENYA NTAMBIKA - COMPUTER SCIENCE STUDENT</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<link rel="stylesheet" href="css/styles.css">
 <body>
 
   <header>
-    <h1>WELCOME TO THE WORLD OF WEB TECHNOLOGY</h1>
-    <h1>MWENYA NTAMBIKA - 202501409</h1>
-    <p>SECOND-YEAR COMPUTER SCIENCE STUDENT, MULUNGUSHI UNIVERSITY .</p>
-  </header>
+  <p>WELCOME TO THE WORLD OF WEB TECHNOLOGY</p>
+  <p>MWENYA NTAMBIKA - 202501409</p>
+  <p>SECOND-YEAR COMPUTER SCIENCE STUDENT, MULUNGUSHI UNIVERSITY</p>
+  <button id="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+</header>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#hobbies">Hobbies</a>
-    <a href="#photos">Photos</a>
-    <a href="#media">Media</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <button id="menu-toggle" type="button" aria-expanded="false">Menu</button>
+  <a href="#about">About</a>
+  <a href="#hobbies">Hobbies</a>
+  <a href="#projects">Projects</a>
+  <a href="#photos">Photos</a>
+  <a href="#media">Media</a>
+  <a href="#contact">Contact</a>
+</nav>
 
   <main>
+     <section id="hero">
+  <h1>Hi, I'm Mwenya 👋</h1>
+  <p class="programme">BSc Computer science | Mulungushi University</p>
+  <p>I'm a second-year computer science student who loves building things for the web.</p>
+  <a href="#projects" class="btn">View My Projects</a>
+</section>
+<section id="projects">
+  <h2>My Projects and Skills</h2>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        My name is Mwenya Ntambika, a second year computer science student at Mulungushi University.
-        I'm drawn to computer science because I love solving problems with technology, and I'm especially interested in going further into tech as I progress through the programme . Outside of class, I am an outgoing and curious person who enjoys listening to music and spending time with freinds .Studying web technology feels like a first real step towards the bigger tech projects I want to build in the future.
-      </p>
-    </section>
+  <article class="project-card">
+    <h3>HTML5 Personal Website</h3>
+    <p>Built this site with semantic HTML, including a table, a form, photos, video and audio.</p>
+  </article>
+
+  <article class="project-card">
+    <h3>CSS Styling and Layout</h3>
+    <p>Learned the box model, selectors, colours and responsive design with media queries.</p>
+  </article>
+
+  <article class="project-card">
+    <h3>JavaScript Interactivity</h3>
+    <p>Learned how events and the DOM let a page respond to what a visitor does.</p>
+  </article>
+</section>
 
     <section id="hobbies">
       <h2>My Hobbies</h2>
@@ -80,22 +99,29 @@
       </table>
     </section>
 <section id="photos">
-      <h2>My Photos</h2>
-      <ul>
-        <li>
-           <p>A spot with good ligting on campus.</p>
-          <img src="images/photo1.jpg" alt="View of Mulungushi University">
-        </li>
-        <li>
-          <p>A late night view of the campus.</p>
-          <img src="images/photo2.jpg" alt="View of Mulungushi University">
-        </li>
-        <li>
-           <p>A view of Mulungushi University campus.</p>
-          <img src="images/photo3.jpg" alt="View of Mulungushi University">
-        </li>
-      </ul>
-    </section>
+  <h2>My Photos</h2>
+
+  <div id="gallery">
+    <figure class="slide">
+      <img src="images/photo1.jpg" alt="A well-lit spot on the Mulungushi University campus">
+      <figcaption>A spot with good lighting on campus.</figcaption>
+    </figure>
+    <figure class="slide" hidden>
+      <img src="images/photo2.jpg" alt="The Mulungushi University campus at night">
+      <figcaption>A late night view of the campus.</figcaption>
+    </figure>
+    <figure class="slide" hidden>
+      <img src="images/photo3.jpg" alt="A view of the Mulungushi University campus">
+      <figcaption>A view of Mulungushi University campus.</figcaption>
+    </figure>
+  </div>
+
+  <div class="gallery-controls">
+    <button id="prev-photo" type="button">Previous</button>
+    <span id="photo-counter">Photo 1 of 3</span>
+    <button id="next-photo" type="button">Next</button>
+  </div>
+</section>
     <section id="media">
       <h2>My Media</h2>
 
@@ -115,7 +141,8 @@
     <section id="contact">
       <h2>Contact</h2>
       <p>This form is a browser demonstration only — it doesn't send any data.</p>
-      <form action="#">
+      <form action="=#" id="contact-form" novalidate>
+        <p>Browser demonstration only — no message is sent.</p>
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
 
@@ -131,8 +158,9 @@
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="5" required></textarea>
 
-        <button type="submit">Send</button>
+        <button type="submit">Preview</button>
       </form>
+      <div id="form-feedback" aria-live="polite"></div>
     </section>
   </main>
 <footer>
@@ -142,6 +170,8 @@
        <a href="#">Contact Us</a> |
        <a href="#">Privacy Policy</a>
     </P>
-</footer>
+<p><a href="https://github.com/mwenyantambika-lgtm/myweb" target="_blank" rel="noopener">View Source on GitHub</a></p>
+  </footer>
+<script src="js/script.js" defer></script>
 </body>
 </html>
